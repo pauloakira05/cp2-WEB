@@ -1,0 +1,81 @@
+        /* CSS para estilização */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecd3d3; /* Cor de fundo */
+            color: #333;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Estilos para o conteúdo */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Estilos para o slideshow */
+        .slideshow-container {
+            max-width: 400px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para os cards de produtos */
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para o formulário de contato */
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }

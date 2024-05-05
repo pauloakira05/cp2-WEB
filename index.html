@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Bikecity</title>
+    <style>
+        /* CSS para estilização */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Cor de fundo padrão */
+            color: #333;
+        }
+
+        /* Adicione estilos conforme necessário para as outras páginas */
+
+        /* CSS para slideshow */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        /* Adicione estilos para os cards de produtos */
+
+        /* CSS para formulário de contato */
+        /* Adicione estilos conforme necessário */
+    </style>
+</head>
+<body>
+
+<!-- Página Index -->
+<div class="slideshow-container">
+    <div class="slides">
+        <img src="img/imagem1.jpg" alt="Slide 1">
+    </div>
+    <div class="slides">
+        <img src="img/imagem2.jpg" alt="Slide 2">
+    </div>
+    <div class="slides">
+        <img src="img/imagem3.jpg" alt="Slide 3">
+    </div>
+    <div class="slides">
+        <img src="img/imagem4.jpg" alt="Slide 4">
+    </div>
+</div>
+
+<!-- Adicione cards de produtos aqui -->
+
+<!-- Adicione o alerta de boas-vindas -->
+<script>
+    alert("Seja bem-vindo!");
+</script>
+
+<!-- JavaScript para slideshow -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Altere o tempo de exibição conforme necessário
+    }
+</script>
+
+<!-- JavaScript para validação de formulário de contato -->
+<script>
+    function validateForm() {
+        const name = document.forms["contactForm"]["name"].value;
+        const phone = document.forms["contactForm"]["phone"].value;
+        const email = document.forms["contactForm"]["email"].value;
+        if (name == "" || phone == "" || email == "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        }
+    }
+</script>
+
+<!-- Página Contato -->
+<div id="contato" style="display: none;">
+    <form name="contactForm" onsubmit="return validateForm()">
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="phone">Telefone:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<!-- Página Login -->
+<div id="login" style="display: none;">
+    <!-- Adicione o formulário de login e a validação de login aqui -->
+</div>
+
+<!-- Página Quiz -->
+<div id="quiz" style="display: none;">
+    <!-- Adicione o quiz com prompts e resultados aqui -->
+</div>
+
+<script>
+    // Função para mostrar páginas
+    function showPage(pageId) {
+        // Oculta todas as páginas
+        document.getElementById("contato").style.display = "none";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("quiz").style.display = "none";
+
+        // Exibe a página especificada
+        document.getElementById(pageId).style.display = "block";
+    }
+
+    // Chama a página do quiz após o login
+    function login() {
+        // Validar o login aqui
+
+        // Se o login for bem-sucedido, chama a página do quiz
+        showPage("quiz");
+    }
+
+    // Mostrar a página do contato por padrão
+    showPage("contato");
+</script>
+
+</body>
+</html>
