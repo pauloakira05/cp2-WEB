@@ -1,21 +1,35 @@
-        /* CSS para estilização */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ecd3d3; /* Cor de fundo */
-            color: #333;
+            background-color: hsl(221, 31%, 86%);
+            color: #000000;
         }
-
-        /* Estilos para o cabeçalho */
-        header {
-            background-color: #333;
-            color: #fff;
+        
+        #header-brand {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
             text-align: center;
-            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: hsl(221, 31%, 86%);
+            color: rgb(0, 0, 0);
+            transition: background-color 0.3s ease;
+          }
+          
+          #header-brand:hover {
+            background-color: hsl(221, 31%, 86%);
+          }
+
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: left;
+            padding: 15px;
         }
 
-        /* Estilos para o conteúdo */
         .container {
             max-width: 1200px;
             margin: 20px auto;
